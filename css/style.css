@@ -26,7 +26,7 @@ body
     min-height: 100vh;
 
     font-family: var(--textos);
-    background-color:#E7BCDE ;
+    background-color:var(--C) ;
 }
 header
 {
@@ -44,16 +44,13 @@ header
 .titulo
 {
     font-family: var(--textos);
-    padding: 15px ;
     text-align: center;
     background-color:var(--B);
 }
 .header-logo
 {
-    max-height: 100%;
-    width: 50px;
+    width: 60px;
 }
-
 .navbar
 {
     z-index: -1;
@@ -74,7 +71,9 @@ header
 
 .navbar-lista li a:hover
 {
-    text-shadow: 0 0 15px black;
+    transform: translateY(-5px);
+    transition-duration: 0.5s;
+    text-shadow: 0 0 15px wheat;
 }
 #toggle-menu
 {
