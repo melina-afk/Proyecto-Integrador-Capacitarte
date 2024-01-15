@@ -1,0 +1,95 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,900;1,100;1,200;1,300;1,400;1,900&display=swap');
+
+/* Normalize */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variables */
+:root{
+    /* Colores */
+    --A:#FED9ED;
+    --B:#E7BCDE;
+    --C:#BB9CC0;
+    --D:#67729D;
+
+    /* Fuentes */
+    --titulos:'Bungee Spice', sans-serif;
+    --textos:'Montserrat', sans-serif;
+}
+
+body
+{
+    min-height: 100vh;
+
+    font-family: var(--textos);
+    background-color:#E7BCDE ;
+}
+header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding: 15px 20px;
+    background-color: var(--D);
+    position: fixed;
+    width: 100%;
+    z-index:2;
+}
+
+.titulo
+{
+    font-family: var(--textos);
+    padding: 15px ;
+    text-align: center;
+    background-color:var(--B);
+}
+.header-logo
+{
+    max-height: 100%;
+    width: 50px;
+}
+
+.navbar
+{
+    z-index: -1;
+}
+
+.navbar-lista
+{
+    display: none;
+    column-gap: 10px;
+    list-style: none;
+}
+
+.navbar-lista li a{
+    text-decoration: none;
+    color: var(--B);
+    z-index: -1;
+}
+
+.navbar-lista li a:hover
+{
+    text-shadow: 0 0 15px black;
+}
+#toggle-menu
+{
+    display: none;
+}
+#toggle-menu:checked ~ .navbar-lista{
+    display: flex;
+    flex-flow: column;
+    position: absolute;
+    row-gap: 25px;
+    padding: 40px;
+    right: 0;
+    background-color: var(--D);
+    border-end-start-radius: 20px;
+    animation-name: navbar;
+    animation-duration: 0.9s;
+    z-index: -1;
+}
