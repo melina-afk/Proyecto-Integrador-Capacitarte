@@ -33,7 +33,7 @@ header
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 70px;
+    height: 60px;
     padding: 15px 20px;
     background-color: var(--D);
     position: fixed;
@@ -47,6 +47,7 @@ header
     text-align: center;
     background-color:var(--B);
 }
+/*barra de navegacion*/
 .header-logo
 {
     width: 60px;
@@ -79,16 +80,99 @@ header
 {
     display: none;
 }
+
 #toggle-menu:checked ~ .navbar-lista{
     display: flex;
-    flex-flow: column;
     position: absolute;
-    row-gap: 25px;
-    padding: 40px;
+    flex-flow: column;
+    row-gap: 20px;
+    padding: 30px;
     right: 0;
     background-color: var(--D);
     border-end-start-radius: 20px;
     animation-name: navbar;
     animation-duration: 0.9s;
     z-index: -1;
+}
+.bars-menu i
+{
+    padding: 28px;
+}
+/*banner que cambia de imagen*/
+.banner
+{
+    position:relative;
+    
+    width: 100%;
+    height: calc(100vh - 50px);
+
+    background-size: cover;
+    background-position: center;
+    transition: all .1s ease-in-out;
+    background-image: url(../assets/banner1.jpg);
+
+    animation: banner 24s infinite linear;
+}
+
+.banner-content
+{
+    width: 100%;
+    height: 100%;
+
+    color: var(--C);
+    background-color: rgba(0, 22, 40, .6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.banner-content h1
+{
+    padding-bottom: 20px;
+    font-size: 40px;
+    text-align: center;
+}
+.banner-content a
+{
+    text-decoration: none;
+    color: var(--C);
+    padding: 10px 20px;
+    border: 1px solid white;
+    text-transform: uppercase;
+    transition: all .3s ease-in-out;
+}
+.banner-content a:hover
+{
+    background-color: white;
+    color: #333;
+}
+/*animacion para el banner*/
+@keyframes banner
+{
+    0%
+    {
+        background-image: url(../assets/banner1.jpg);
+    }
+    33.33%
+    {
+        background-image: url(../assets/banner1.jpg);
+    }
+    34.33%
+    {
+        background-image: url(../assets/banner2.jpg);
+    }
+    66.66%
+    {
+        background-image: url(../assets/banner2.jpg);
+    }
+
+    67.66%
+    {
+        background-image: url(../assets/banner3.jpg);
+    }
+    100%
+    {
+        background-image: url(../assets/banner3.jpg);
+    }
 }
