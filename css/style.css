@@ -43,6 +43,7 @@ header
 
 .titulo
 {
+    padding: 5px;
     font-family: var(--textos);
     text-align: center;
     background-color:var(--B);
@@ -175,4 +176,53 @@ header
     {
         background-image: url(../assets/banner3.jpg);
     }
+}
+
+/*segundo section, esto es de los articulos de venta*/
+.container /*aca van a ir las cajas*/
+{
+    display: flex;
+    padding-top: 10px;
+    width: 100%;
+}
+
+.caja /*caracteristicas generales de las cajas*/
+{
+    height: 200px; /* Altura */
+    width: 200px; /* Ancho */
+
+
+}
+
+.a{
+    background-image: url(../assets/cartera1.jpeg);
+    background-repeat: no-repeat;
+
+    padding: 30px
+
+}
+.b{
+    background-image: url(../assets/tacos1.jpg);
+    background-repeat: no-repeat;
+}
+.c{
+    background-image: url(../assets/cartera4.jpg);
+    background-repeat: no-repeat;
+}
+.d{
+    background-image: url(../assets/tacos2.jpg);
+    background-repeat: no-repeat;
+}
+.e{background-image: url(../assets/cartera3.jpg);
+    background-repeat: no-repeat;
+    
+}
+.f
+{
+    background-image: url(../assets/tacos3.jpg);
+    background-repeat: no-repeat;
+}
+.a, .b, .c, .d , .e, .f{
+    background-size: contain; /* Ajusta la imagen para que se vea completa en el contenedor y no se recorte */
+    background-position: center; /* Centra la imagen en el contenedor */
 }
